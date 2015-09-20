@@ -68,6 +68,31 @@ int[] Lucky_numbers (int n){
   return a; 
 } 
 
+boolean Verifica_numero (int n){ 
+   boolean b = false;
+  if(n==2){
+    b=false;
+    println("El numero 'n' no es un numero de la suerte!"); 
+    println("Try Again :´("); 
+  }else{
+    int e = tamano_arreglo(n); 
+    int[] a = Lucky_numbers(n); 
+    for(int i=0;i<=e-1;i++){ 
+      if (a[i]==n){ 
+        b = true; 
+      } 
+    } 
+    if(b==false){ 
+      println("El numero 'n' no es un numero de la suerte!"); 
+      println("Try Again :´("); 
+    }else{ 
+      println("El numero 'n' es un numero de la suerte!!!"); 
+      println(":D"); 
+    }
+   }
+    return b; 
+};
+
 int[] arreglo_final (int n){
   int[] a = Lucky_numbers (n*100); 
   int[] j = new int [n]; 
@@ -79,5 +104,5 @@ int[] arreglo_final (int n){
 
 void setup(){ 
   int n=12;
-  println(arreglo_final (n));
+  println(Verifica_numero (n));
 }
