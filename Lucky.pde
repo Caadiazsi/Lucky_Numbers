@@ -68,7 +68,16 @@ int[] Lucky_numbers (int n){
   return a; 
 } 
 
+int[] arreglo_final (int n){
+  int[] a = Lucky_numbers (n*100); 
+  int[] j = new int [n]; 
+  for (int i=0;i<=n-1;i++){ 
+    j[i]=a[i]; 
+   } 
+   return j; 
+}  
+
 void setup(){ 
   int n=12;
-  println(Lucky_numbers (n));
+  println(arreglo_final (n));
 }
