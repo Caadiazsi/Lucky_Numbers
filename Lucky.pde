@@ -55,5 +55,20 @@ int[] borra_numeros (int[] a, int e,int k){
     return a; 
 } 
 
+int[] Lucky_numbers (int n){ 
+  int[] a = crea_arreglo_impares (n);
+  int e = tamano_arreglo(n); 
+  int p = 1; 
+  int h = a[p]; 
+  while(h<=e){ 
+    a  = borra_numeros (a,e,h); 
+    p++; 
+    h = a[p]; 
+  } 
+  return a; 
+} 
+
 void setup(){ 
+  int n=12;
+  println(Lucky_numbers (n));
 }
