@@ -103,6 +103,17 @@ int[] arreglo_final (int n){
 }  
 
 void setup(){ 
-  int n=12;
-  println(Verifica_numero (n));
+  int n=1000;
+  println ("LUCKY NUMBERS"); 
+  println("Respuestas dadas para n=");
+  println(n);
+  //Los n primeros numeros de la suerte.
+  println("Los primeros 'n' numeros de la suerte son:");
+  if(n!=2)
+  println(arreglo_final(n));
+  if(n==2)
+  println(1);
+  //Determina si n es un numero de la suerte
+  println(Verifica_numero(n));
+  println ("Jonatan Campo - Camilo Diaz - Manuel Miranda");  
 }
