@@ -137,7 +137,7 @@ int[] arreglo_final (int n){
 //Utilize q para saber que numeros hasta q son de la suerte y graficarlo.
 void setup(){
   //
-  int n=100;
+  int n=2;
   int m = 1;
   int q = 20;
   //
@@ -146,14 +146,11 @@ void setup(){
   println("Respuesta dadas para n=");
   println(n);
   //Los n primeros numeros de la suerte.
-  if(n!=2)
   println(arreglo_final(n));
-  if(n==2)
-  println(1);
   println("Es m un numero de la suerte?");
   println("Respuesta dadas para m=");
   println(m);
-  //Determina si n es un numero de la suerte
+  //Determina si m es un numero de la suerte
   println(Verifica_numero(m));
   println ("Jonatan Campo - Camilo Diaz - Manuel Miranda");
   double u = sqrt(q);
