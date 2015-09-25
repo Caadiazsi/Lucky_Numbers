@@ -93,29 +93,33 @@ boolean Verificar_numero (int n){
 
 boolean Verifica_numero (int n){ 
    boolean b = false;
-  if(n==0||n==1||n==5||n==6){
-    b=false;
+  if(n==1){
+    b=true;
   }else{
-    if(n==2){
+    if(n==0||n==5||n==6){
       b=false;
-      println("El numero 'm' no es un numero de la suerte!"); 
-      println("Try Again :´("); 
     }else{
-      int e = tamano_arreglo(n); 
-      int[] a = Lucky_numbers(n); 
-      for(int i=0;i<=e-1;i++){ 
-        if (a[i]==n){ 
-          b = true; 
-        } 
-      } 
-      if(b==false){ 
+      if(n==2){
+        b=false;
         println("El numero 'm' no es un numero de la suerte!"); 
         println("Try Again :´("); 
-      }else{ 
-        println("El numero 'm' es un numero de la suerte!!!"); 
-        println(":D"); 
-      }
-     }
+      }else{
+        int e = tamano_arreglo(n); 
+        int[] a = Lucky_numbers(n); 
+        for(int i=0;i<=e-1;i++){ 
+          if (a[i]==n){ 
+            b = true; 
+          } 
+        } 
+        if(b==false){ 
+          println("El numero 'm' no es un numero de la suerte!"); 
+          println("Try Again :´("); 
+        }else{ 
+          println("El numero 'm' es un numero de la suerte!!!"); 
+          println(":D"); 
+        }
+       }
+    }
   }
   return b; 
 };
@@ -135,7 +139,7 @@ void setup(){
   //
   int n=100;
   int m = 1;
-  int q = 89;
+  int q = 20;
   //
   println ("LUCKY NUMBERS"); 
   println("Los primeros 'n' numeros de la suerte son:");
